@@ -11,11 +11,10 @@ e donuts(23) retorna 'Number of donuts: many'
 
 
 def donuts(count):
-    # +++ SUA SOLUÇÃO +++
     if count >= 10:
         count = 'many'
 
-    return 'Number of donuts: ' + str(count)
+    return ' '.join(['Number of donuts:', str(count)])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
