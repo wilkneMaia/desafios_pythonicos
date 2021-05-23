@@ -12,9 +12,14 @@ Exemplo:
 Assuma que a e b tem tamanho 2 ou maior.
 """
 
+
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # Soluão 1
+    # w = a
+    # a = b[:2] + a[2:]
+    # b = w[:2] + b[2:]
+    # return ' '.join([a, b])
+    return ' '.join([b[:2] + a[2:], a[:2] + b[2:]])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
