@@ -12,22 +12,25 @@ Retorne o resultado da string.
 
 
 def verbing(s):
-    var1 = 'ing'
-    var2 = 'ly'
+    # Soluão 1
+    # v_ing = 'ing'
+    # v_ly = 'ly'
+    # if s[-3:] == v_ing and len(s) > 3:
+    #     result = s[:] + v_ly
+    # elif s[-3:] != v_ing and len(s) > 3:
+    #     result = s[:] + v_ing
+    # else:
+    #     result = s[:]
+    # return result
 
-    if s[-3:] == var1 and len(s) > 3:
-        result = s[:] + var2
-
-    elif s[-3:] != var1 and len(s) > 3:
-        result = s[:] + var1
-
+    if len(s) > 3:
+        result = f'{s + "ing" if not "ing" in s else s + "ly"}'
     else:
         result = s[:]
-
     return result
 
+    # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):
     """
