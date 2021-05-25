@@ -14,11 +14,17 @@ Assuma que a e b tem tamanho 2 ou maior.
 
 
 def mix_up(a, b):
-    # Soluão 1
-    # w = a
-    # a = b[:2] + a[2:]
-    # b = w[:2] + b[2:]
-    # return ' '.join([a, b])
+    return solution_2(a, b)
+
+
+def solution_1(a, b):
+    w = a
+    a = b[:2] + a[2:]
+    b = w[:2] + b[2:]
+    return ' '.join([a, b])
+
+
+def solution_2(a, b):
     return ' '.join([b[:2] + a[2:], a[:2] + b[2:]])
 
 

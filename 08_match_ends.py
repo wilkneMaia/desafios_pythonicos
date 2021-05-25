@@ -10,7 +10,10 @@ PS: Python não possui o operador ++, porém += funciona.
 
 
 def match_ends(words):
-    # Soluão 1
+    return solution_1(words)
+
+
+def solution_1(words):  # Using "FOR"
     cont_string = 0
     for x in words:
         if len(x) > 1 and x[0] == x[-1]:
@@ -18,7 +21,12 @@ def match_ends(words):
     return cont_string
 
 
+def solution_2(words):  # Using "List Comprehension"
+    return
+
+
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """

@@ -11,16 +11,17 @@ Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 
 
 def not_bad(s):
+    return solution_1(s)
+
+
+def solution_1(s):
     v_index_not = s.find('not')
     v_index_bad = s.find('bad')
     v_bad = len('bad')
-
     if v_index_bad > v_index_not:
         result = s.replace(s[v_index_not:v_index_bad + v_bad], 'good')
-
     else:
         result = s
-
     return result
 
     # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

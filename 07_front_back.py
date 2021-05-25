@@ -13,6 +13,10 @@ a-frente + b-frente + a-trás + b-trás
 
 
 def front_back(a, b):
+    return solution_1(a, b)
+
+
+def solution_1(a, b):
     # Soluão 1
     if (len(a) % 2) == 0:
         a_front = a[:len(a)//2]
@@ -37,7 +41,6 @@ def front_back(a, b):
     # b_front_string = b[:b_front_cont + b_back_cont]
     # b_back_string = b[b_front_cont + b_back_cont:]
     # return ''.join(a_front_string, b_front_string, a_back_string, b_front_string)
-
 
     # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
