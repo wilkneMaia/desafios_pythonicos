@@ -13,30 +13,34 @@ a-frente + b-frente + a-trás + b-trás
 
 
 def front_back(a, b):
-    a_front = ''
-    a_back = ''
-    b_front = ''
-    b_back = ''
-    a_b = a + b
-
+    # Soluão 1
     if (len(a) % 2) == 0:
         a_front = a[:len(a)//2]
         a_back = a[len(a)//2:]
     else:
         a_front = a[:len(a)//2 + 1]
         a_back = a[len(a)//2 + 1:]
-
     if (len(b) % 2) == 0:
         b_front = b[:len(b)//2]
         b_back = b[len(b)//2:]
     else:
         b_front = b[:len(b)//2 + 1]
         b_back = b[len(b)//2 + 1:]
-
     return a_front + b_front + a_back + b_back
 
+    # Soluão 2
+    #  user "slice" and "divmod" and join
+    # a_front_cont, a_back_cont = divmod(len(a), 2)  # divmod(dividend, divisor)
+    # b_front_cont, b_back_cont = divmod(len(b), 2)  # divmod(dividend, divisor)
+    # a_front_string = a[:a_front_cont + a_back_cont]
+    # a_back_string = a[a_front_cont + a_back_cont:]
+    # b_front_string = b[:b_front_cont + b_back_cont]
+    # b_back_string = b[b_front_cont + b_back_cont:]
+    # return ''.join(a_front_string, b_front_string, a_back_string, b_front_string)
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
+    # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
