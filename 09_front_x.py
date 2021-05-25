@@ -11,9 +11,18 @@ Dica: Isso pode ser resolvido criando 2 listas e ordenando cada uma
 antes de combina-las.
 """
 
+
 def front_x(words):
-    # +++ SUA SOLUÇÃO +++
-    return
+    return solution_1(words)
+
+
+def solution_1(words):
+    list_init_x = []
+    list_not_init_x = []
+
+    [list_init_x.append(y) for y in words if y.startswith('x')]
+    [list_not_init_x.append(y) for y in words if not y.startswith('x')]
+    return sorted(list_init_x) + sorted(list_not_init_x)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
