@@ -9,8 +9,25 @@ Irá retornar: [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 
 Dica: Use uma custom key= function para extrair o ultimo elemento de cada tupla.
 """
+
+
 def sort_last(tuples):
-    # +++ SUA SOLUÇÃO +++
+    return solution_1(tuples)
+
+
+def solution_1(tuples):  # lambda
+    tuples.sort(key=lambda item: item[-1])
+    return tuples
+
+
+def solution_2(tuples):
+    #     key_index = []
+    #     key_list = []
+    #     for item in tuples:
+    #         key_list.append(custKey(item))
+    #     return sorted(key_list)
+    # def custKey(i):
+    #     return i[len(i)-1]
     return
 
 
