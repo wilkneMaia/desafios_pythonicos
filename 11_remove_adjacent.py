@@ -8,12 +8,27 @@ Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
 
+
 def remove_adjacent(nums):
-    # +++ SUA SOLUÇÃO +++
+    return solution_1(nums)
+
+
+def solution_1(nums):
+    new_list = []
+    nome = None
+    for num in nums:
+        if num != nome:
+            new_list.append(num)
+        nome = num
+    return new_list
+# inspiration: https://github.com/dougfraga/pythonic-challenges/blob/master/11_remove_adjacent.py
+
+
+def solution_2(nums):  # used "ZIP"
     return
 
-
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
