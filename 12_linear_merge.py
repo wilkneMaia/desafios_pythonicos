@@ -9,8 +9,16 @@ A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 única passagem em cada uma das listas.
 """
 
+
 def linear_merge(list1, list2):
-    # +++ SUA SOLUÇÃO +++
+    return solution_1(list1, list2)
+
+
+def solution_1(list1, list2):
+    return sorted(list1 + list2)
+
+
+def solution_2(list1, list2):  # used "RIP"
     return
 
 
