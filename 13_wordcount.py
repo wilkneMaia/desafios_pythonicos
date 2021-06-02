@@ -54,7 +54,7 @@ e conferindo cada etapa do seu progresso.
 import sys
 
 
-# +++ SUA SOLUÇÃO +++
+# +++ SUA SOLUÇÃO  +++
 # Defina as funções print_words(filename) e print_top(filename).
 
 
