@@ -12,7 +12,9 @@ Irá retornar: [1, 2, 3]
 def remove_adjacent(nums):
     return solution_1(nums)
 
-
+# 1˚ solution
+def solution_2(nums):
+    
 def solution_1(nums):
     new_list = []
     nome = None
@@ -23,10 +25,25 @@ def solution_1(nums):
     return new_list
 # inspiration: https://github.com/dougfraga/pythonic-challenges/blob/master/11_remove_adjacent.py
 
+# 2˚ solution
+def solution_2(nums):
+    if not nums:
+        return []
+    
+    l = [nums[0]]
+    
+    for c, n in zip(nums[:-1], nums[1:]):
+        if c != n:
+            l.append(n)
+    return l
 
-def solution_2(nums):  # used "ZIP"
-    return
-
+# 3˚ solution
+def solution_2(nums):
+    if not nums:
+        return []
+    
+    return [nums[0]] + [n for c, n in zip(nums[:-1], nums[1:]) if c != n]
+    
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 
