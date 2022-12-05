@@ -28,11 +28,11 @@ def solution_1(s):
 
 
 def solution_2(s):
-    if len(s) > 3:
-        result = f'{s + "ing" if not "ing" in s else s + "ly"}'
-    else:
-        result = s[:]
-    return result
+  if len(s) > 3:
+    result = f'{s + "ing" if s[-3:] != "ing" else s + "ly"}'
+  else:
+    result = s[:]
+  return result
 
     # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
@@ -55,7 +55,8 @@ def test(f, in_, expected):
 
 
 if __name__ == '__main__':
-    # Testes que verificam o resultado do seu código em alguns cenários.
-    test(verbing, 'hail', 'hailing')
-    test(verbing, 'swiming', 'swimingly')
-    test(verbing, 'do', 'do')
+  # Testes que verificam o resultado do seu código em alguns cenários.
+  test(verbing, 'hail', 'hailing')
+  test(verbing, 'swiming', 'swimingly')
+  test(verbing, 'singer', 'singering')
+  test(verbing, 'do', 'do')
