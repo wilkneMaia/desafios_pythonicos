@@ -27,8 +27,8 @@ def solution_1(s):
 
     # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
-    def solution_2():
-        return re.sub('not .* bad', 'good', s)
+def solution_2():
+    return re.sub('not .* bad', 'good', s)
 
 def test(f, in_, expected):
     """
